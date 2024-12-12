@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+        <style>
+            .container {
+                margin: 50px auto;
+                max-width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="4bUxFO4rckY"></div>
+        </div>
+
+       
+        
+        <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+        <script>
+            // Change "{}" to your options:
+        // https://github.com/sampotts/plyr/#options
+        const player = new Plyr('#player', {
+            youtube: {
+                rel: 0, // Disable related videos
+            },
+        });
+
+        // Expose player so it can be used from the console
+        window.player = player;
+
+        </script>
+    </body>
+</html>
